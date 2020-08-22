@@ -1,0 +1,19 @@
+.sidebar {
+    width: 300px;
+    position: fixed;
+    height: 100%;
+    border-right: 1px solid #e0e0e0;
+}
+.menu {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    margin: 0px;
+    padding: 20px 20px 0 50px;
+    font-family: 'Arial';
+}
+
+.menuItem {
+    padding: 20px 0 20px 0;
+    width: 50px;
+}
