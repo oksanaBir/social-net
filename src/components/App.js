@@ -1,12 +1,9 @@
 import React from 'react';
-import Content from '../ui/Content';
 import Menu from '../ui/Menu';
-import { connect } from 'react-redux';
+import "../styles/mainStyles.css"
 
 export default function App() {
     return (
-        <Content>
-            <Menu />           
-        </Content>
+        <Menu />
     );
 }
