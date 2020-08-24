@@ -14,7 +14,7 @@ export default function Menu() {
                 <li className={styles.menuItem}>Сообщения</li>
                 <li className={styles.menuItem}>Закладки</li>
                 <li className={styles.menuItem}>Профиль</li>
-                <li><Button>Написать</Button></li>
+                <li className={styles.mainMenuItem}><Button>Написать</Button></li>
             </ul>
         </div>
     )
