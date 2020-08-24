@@ -1,7 +1,15 @@
 .button {
     padding: 15px;
-    background-color: #17BF63;
+    text-align: center;
+    background-color: #4090D6;
     color: white;
     border-radius: 15px;
     width: auto;
+    cursor: pointer;
+}
+
+.mainButton {
+    background-color: white;
+    border: #4090D6 1.5px solid;
+    color: #4090D6;
 }
