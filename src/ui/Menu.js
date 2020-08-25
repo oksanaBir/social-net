@@ -5,10 +5,16 @@ import classNames from 'classnames/bind';
 
 const cx = classNames.bind(styles);
 
-export default function Menu() {
+export default function Menu({toggle = false}) {
     return (
-        <div className={styles.sidebar}>
-            <ul className={styles.menu}>
+        <div className={cx({
+            sidebar: true,
+            shrinkSidebar: toggle
+        })}>
+            <ul className={cx({
+                menu: true,
+                shrinkMenu: toggle
+            })}>
                 <li className={styles.menuItem}>Главная</li>
                 <li className={styles.menuItem}>Уведомления</li>
                 <li className={styles.menuItem}>Сообщения</li>
