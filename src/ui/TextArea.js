@@ -1,12 +1,13 @@
 import React from 'react';
 import styles from '../styles/textarea.css';
 
-export default function TextArea() {
+export default function TextArea({value, onChange}) {
     return(
         <textarea
             className={styles.textarea}
-            placleholder="Написать"
-            style={{ left: '500px' }}
+            onChange={(event) => onChange(event.target.value)}
+            placeholder="Написать"
+            value={value}
         />
-    )
+    );
 }
