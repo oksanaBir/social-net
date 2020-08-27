@@ -1,15 +1,19 @@
-.sidebar {
+.fullSidebar {
     width: 300px;
     position: fixed;
     height: 100%;
-    border-right: 1px solid #43D694;
+    border-right: 1px solid #c9c9c9;
 }
 
 .shrinkSidebar {
     width: 80px;
+    position: fixed;
+    height: 100%;
+    border-right: 1px solid #c9c9c9;
+
 }
 
-.menu {
+.fullMenu {
     display: flex;
     height: 100%;
     flex-direction: column;
