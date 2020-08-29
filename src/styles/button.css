@@ -13,3 +13,7 @@
     background-color: #43D694;
     color: white;
 }
+
+.mainButton:hover {
+    background-color: #40c288;
+}

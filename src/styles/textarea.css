@@ -13,4 +13,5 @@
 
 .textarea:focus {
     outline: none;
+    border: #40c288 1.5px solid;
 }
