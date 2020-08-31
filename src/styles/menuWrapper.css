@@ -26,18 +26,3 @@
 .shrinkMenu {
     display: none;
 }
-
-.menuItem {
-    padding: 20px;
-    cursor: pointer;
-}
-
-.menuItem:hover {
-    color: #43D694;
-}
-
-.mainMenuItem {
-    justify-self: flex-end;
-    margin-top: auto;
-    margin-bottom: 50px;
-}

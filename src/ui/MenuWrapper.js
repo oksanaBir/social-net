@@ -1,12 +1,13 @@
 import React from 'react';
-import styles from '../styles/menu.css';
+import styles from '../styles/menuWrapper.css';
 import Button from './Button';
+import MenuItem from './MenuItem';
 import classNames from 'classnames/bind';
 import PropTypes from 'prop-types';
 
 const cx = classNames.bind(styles);
 
-export default function Menu({full, shrink}) {
+export default function MenuWrapper({full, shrink}) {
     return (
         <div className={cx({
             fullSidebar: full,
@@ -16,23 +17,23 @@ export default function Menu({full, shrink}) {
                 fullMenu: full,
                 shrinkMenu: shrink,
             })}>
-                <li className={styles.menuItem}>Главная</li>
-                <li className={styles.menuItem}>Уведомления</li>
-                <li className={styles.menuItem}>Сообщения</li>
-                <li className={styles.menuItem}>Закладки</li>
-                <li className={styles.menuItem}>Профиль</li>
-                <li className={styles.mainMenuItem}><Button mainButton={true}>Написать</Button></li>
+                <MenuItem>Главная</MenuItem>
+                <MenuItem>Уведомления</MenuItem>
+                <MenuItem>Сообщения</MenuItem>
+                <MenuItem>Закладки</MenuItem>
+                <MenuItem>Профиль</MenuItem>
+                <MenuItem><Button mainButton={true}>Написать</Button></MenuItem>
             </ul>
         </div>
     );
 }
 
-Menu.propTypes = {
+MenuWrapper.propTypes = {
     full: PropTypes.bool,
     shrink: PropTypes.bool,
 }
 
-Menu.defaultProps = {
+MenuWrapper.defaultProps = {
     full: true,
     shrink: false,
 }
