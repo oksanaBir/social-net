@@ -26,13 +26,20 @@ module.exports = {
         }
       },
       {
-        test: /\.css$/,
+        test: /\.less$/,
         use: [
-          "style-loader",
           {
-            loader: "css-loader",
+            loader: 'style-loader',
+          },
+          {
+            loader: 'css-loader',
+          },
+          {
+            loader: 'less-loader',
             options: {
-              modules: true
+              lessOptions: {
+                strictMath: true,
+              }
             }
           }
         ]
