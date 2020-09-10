@@ -1,9 +1,16 @@
 import React from 'react';
-import Menu from '../ui/Menu';
-import "../styles/mainStyles.css"
+import MenuWrapper from '../ui/MenuWrapper';
+import TextArea from '../ui/TextArea';
+import "../styles/mainStyles.css";
+import Icon from '../ui/Icon';
 
 export default function App() {
     return (
-        <Menu />
+        <>
+            <TextArea style={{ left: '500px' }}/>
+            <MenuWrapper />
+            <Icon>i</Icon>
+            <Icon>T</Icon>
+        </>
     );
 }
