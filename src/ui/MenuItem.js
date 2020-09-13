@@ -1,10 +1,10 @@
 import React from 'react';
-import styles from '../styles/menuItem.css';
+import classNames from 'classnames';
 
 export default function MenuItem({children, onClick}) {
     return(
         <li
-            className={styles.menuItem}
+            className={classNames('menuItem')}
             onClick={onClick}
         >
             {children}
