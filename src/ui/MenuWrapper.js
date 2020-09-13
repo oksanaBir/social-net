@@ -1,19 +1,16 @@
 import React from 'react';
-import styles from '../styles/menuWrapper.css';
 import Button from './Button';
 import MenuItem from './MenuItem';
-import classNames from 'classnames/bind';
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
-
-const cx = classNames.bind(styles);
 
 export default function MenuWrapper({full, shrink}) {
     return (
-        <div className={cx({
+        <div className={classNames({
             fullSidebar: full,
             shrinkSidebar: shrink,
         })}>
-            <ul className={cx({
+            <ul className={classNames({
                 fullMenu: full,
                 shrinkMenu: shrink,
             })}>
