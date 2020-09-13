@@ -1,14 +1,11 @@
 import React from 'react';
-import styles from '../styles/button.css';
-import classNames from 'classnames/bind';
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
-
-let cx = classNames.bind(styles);
 
 export default function Button({children, onClick, mainButton}) {
     return (
         <div
-            className={cx({
+            className={classNames({
                 button: true,
                 mainButton,
             })}
