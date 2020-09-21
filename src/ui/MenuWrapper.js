@@ -1,5 +1,4 @@
 import React from 'react';
-import Button from './Button';
 import MenuItem from './MenuItem';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
@@ -19,7 +18,6 @@ export default function MenuWrapper({full, shrink}) {
                 <MenuItem>Сообщения</MenuItem>
                 <MenuItem>Закладки</MenuItem>
                 <MenuItem>Профиль</MenuItem>
-                <MenuItem><Button mainButton={true}>Написать</Button></MenuItem>
             </ul>
         </div>
     );
