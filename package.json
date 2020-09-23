@@ -14,8 +14,8 @@
 				"babel-loader": "^8.1.0",
 				"css-loader": "^3.5.2",
 				"less": "^3.12.2",
-			    "less-loader": "^7.0.1",
-    			"less-watch-compiler": "^1.13.0",
+				"less-loader": "^7.0.1",
+				"less-watch-compiler": "^1.13.0",
 				"html-webpack-plugin": "^4.3.0",
 				"redux-devtools": "^3.5.0",
 				"style-loader": "^1.1.4",
@@ -24,6 +24,7 @@
 				"webpack-dev-server": "^3.10.3"
 		},
 		"dependencies": {
+				"@ant-design/icons": "^4.2.2",
 				"classnames": "^2.2.6",
 				"prop-types": "^15.7.2",
 				"react": "^16.13.1",
