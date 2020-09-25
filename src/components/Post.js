@@ -2,15 +2,21 @@ import React from 'react';
 import classNames from 'classnames';
 import { FlexBox, flexDirection, flexPositions } from '../ui/FlexBox';
 import Text from '../ui/Text';
-import Icon from '../ui/Icon';
+import { HeartOutlined, ShareAltOutlined } from '@ant-design/icons';
 
-export default function Post({ children }) {
+export default function Post({ text, onLikeClick, onShareClick }) {
     return(
         <div className={classNames('postWrapper')}>
-            <FlexBox direction={flexDirection.column}>
-                <Text>{ children }</Text>
-                <Icon>i</Icon>
-                <Icon>T</Icon>
+            <Text>{ text }</Text>
+            <FlexBox direction={flexDirection.row}>
+                <HeartOutlined
+                    style={{ margin: '5px' }}
+                    onClick={onLikeClick}
+                />
+                <ShareAltOutlined
+                    style={{ margin: '5px' }}
+                    onClick={onShareClick}
+                />
             </FlexBox>
         </div>
     );
