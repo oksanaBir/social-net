@@ -1,17 +1,14 @@
 import React from 'react';
 import classNames from 'classnames';
 import { FlexBox, flexDirection, flexPositions } from '../ui/FlexBox';
-import Text from '../ui/Text';
-import Icon from '../ui/Icon';
+import { CheckOutlined } from '@ant-design/icons';
+import TextArea from '../ui/TextArea';
 
-export default function CreatePost({ children }) {
+export default function CreatePost({ text }) {
     return(
-        <div className={classNames('postWrapper')}>
-            <FlexBox direction={flexDirection.column}>
-                <Text>{ children }</Text>
-                <Icon>i</Icon>
-                <Icon>T</Icon>
-            </FlexBox>
-        </div>
+        <FlexBox direction={flexDirection.column}>
+            <TextArea />
+            <CheckOutlined />
+        </FlexBox>
     );
 }
