@@ -5,18 +5,18 @@ import Text from '../ui/Text';
 import { HeartOutlined, ShareAltOutlined } from '@ant-design/icons';
 import PostWrapper from '../ui/PostWrapper';
 
-export default function Post({ text, onLikeClick, onShareClick }) {
+export default function Post({ text, likePost, sharePost }) {
     return(
         <PostWrapper postWrapper={true}>
             <Text>{ text }</Text>
-            <FlexBox direction={flexDirection.row}>
+            <FlexBox direction={flexDirection.row} margin={15}>
                 <HeartOutlined
                     style={{ margin: '5px' }}
-                    onClick={onLikeClick}
+                    onClick={likePost}
                 />
                 <ShareAltOutlined
                     style={{ margin: '5px' }}
-                    onClick={onShareClick}
+                    onClick={sharePost}
                 />
             </FlexBox>
         </PostWrapper>
