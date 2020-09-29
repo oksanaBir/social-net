@@ -5,10 +5,10 @@ const state = {
     //     like: 0,
     //     share: 0
     // },
-    addPost: {
-        photo: [],
-        text: ''
-    },
+    // createPost: {
+    //     photo: [],
+    //     text: '',
+    // },
 }
 
 export default function app(state, action){
