@@ -5,8 +5,8 @@ import { CheckOutlined, CameraOutlined } from '@ant-design/icons';
 import TextArea from '../ui/TextArea';
 import { useDispatch, useSelector } from 'react-redux';
 
-export default function CreatePost({ addPhoto, createPost }) {
-    const post = useSelector(state => state.posts);
+export default function CreatePost({ }) {
+    const post = useSelector(state => state.post);
     const {postId, text} = post;
     const dispatch = useDispatch();
 
@@ -28,7 +28,7 @@ export default function CreatePost({ addPhoto, createPost }) {
                 <CheckOutlined
                     style={{ margin: '5px' }}
                     onClick={
-                        () => dispatch(createPost(postId))
+                        (postId) => dispatch(createPost(postId))
                     }
                 />
             </FlexBox>
