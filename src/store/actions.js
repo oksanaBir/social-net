@@ -3,14 +3,10 @@ export const DELETE_POST = 'DELETE_POST';
 export const ADD_PHOTO = 'ADD_PHOTO';
 export const ADD_TEXT = 'ADD_TEXT';
 
-export const createPost = () => ({
+export const createPost = (postId) => ({
     postId: Date.now().toString() + Math.random().toString(),
     type: CREATE_POST,
     date: Date.now(),
-    photo: '',
-    text: '',
-    like: 0,
-    share: 0,
 });
 
 export const deletePost = postId => ({
@@ -18,20 +14,14 @@ export const deletePost = postId => ({
     type: DELETE_POST,
 });
 
-export const addPhoto = (postId, value) => ({
-    postId,
+export const addPhoto = (value) => ({
     type: ADD_PHOTO,
     photo: value,
 });
 
 export const addText = (value) => ({
-    postId: Date.now().toString() + Math.random().toString(),
     type: ADD_TEXT,
-    date: Date.now(),
-    photo: '',
     text: value,
-    like: 0,
-    share: 0,
 });
 
 export const likePost = (postId, value) => ({
