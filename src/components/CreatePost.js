@@ -4,10 +4,11 @@ import { FlexBox, flexDirection, flexPositions, margin } from '../ui/FlexBox';
 import { CheckOutlined, CameraOutlined } from '@ant-design/icons';
 import TextArea from '../ui/TextArea';
 import { useDispatch, useSelector } from 'react-redux';
+import { addText, addPhoto, createPost } from '../store/actions';
 
-export default function CreatePost({ }) {
+export default function CreatePost() {
     const post = useSelector(state => state.post);
-    const {postId, text} = post;
+    const {text} = post;
     const dispatch = useDispatch();
 
     return(
@@ -22,13 +23,13 @@ export default function CreatePost({ }) {
                 <CameraOutlined
                     style={{ margin: '5px' }}
                     onClick={
-                        (value) => dispatch(addPhoto(postId, value))
+                        () => dispatch(addPhoto(value))
                     }
                 />
                 <CheckOutlined
                     style={{ margin: '5px' }}
                     onClick={
-                        (postId) => dispatch(createPost(postId))
+                        () => dispatch(createPost())
                     }
                 />
             </FlexBox>
