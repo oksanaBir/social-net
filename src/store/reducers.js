@@ -1,6 +1,7 @@
 import { CREATE_POST, DELETE_POST, ADD_PHOTO, ADD_TEXT } from './actions';
 
 const initialState = {
+    posts: [],
     post: {
         postId: '',
         text: '',
@@ -9,7 +10,6 @@ const initialState = {
         likes: 0,
         share: 0,
     },
-    posts: [],
 }
 
 export default function app(state = initialState, action){
