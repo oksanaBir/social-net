@@ -7,8 +7,7 @@ import PostWrapper from '../ui/PostWrapper';
 import { useDispatch, useSelector } from 'react-redux';
 import { likePost, sharePost, deletePost } from '../store/actions';
 
-export default function Post() {
-    const post = useSelector(state => state.post);
+export default function Post({post}) {
     const {text, likes, share, postId} = post;
     const dispatch = useDispatch();
 
@@ -19,20 +18,22 @@ export default function Post() {
                 <HeartOutlined
                     style={{ margin: '5px' }}
                     onClick={
-                        () => (likePost(postId))
+                        (value) => dispatch(likePost(postId, value))
                     }
                 />
                 <Text value={likes}>{ likes }</Text>
                 <ShareAltOutlined
                     style={{ margin: '5px' }}
                     onClick={
-                        () => dispatch(sharePost(postId))
+                        (value) => dispatch(sharePost(postId, value))
                     }
                 />
                 <Text value={share}>{ share }</Text>
                 <CloseOutlined
                     style={{ margin: '5px' }}
-                    onClick={deletePost} 
+                    onClick={
+                        () => dispatch(deletePost(postId))
+                    } 
                 />
             </FlexBox>
         </PostWrapper>
