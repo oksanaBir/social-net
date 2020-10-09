@@ -13,19 +13,21 @@ export default function Post({post}) {
 
     return(
         <PostWrapper postWrapper={true}>
-            <Text value={text} />
+            <Text> {text}</Text>
             <FlexBox direction={flexDirection.row} margin={15}>
                 <HeartOutlined
                     style={{ margin: '5px' }}
+                    value={likes}
                     onClick={
-                        (value) => dispatch(likePost(postId, value))
+                        () => dispatch(likePost(postId, likes + 1))
                     }
                 />
-                <Text value={likes}>{ likes }</Text>
+                <Text>{ likes }</Text>
                 <ShareAltOutlined
                     style={{ margin: '5px' }}
+                    value={share}
                     onClick={
-                        (value) => dispatch(sharePost(postId, value))
+                        () => dispatch(sharePost(postId, share + 1))
                     }
                 />
                 <Text value={share}>{ share }</Text>
