@@ -1,4 +1,4 @@
-import { CREATE_POST, DELETE_POST, ADD_PHOTO, ADD_TEXT } from './actions';
+import { CREATE_POST, DELETE_POST, ADD_PHOTO, ADD_TEXT, LIKE_POST, SHARE_POST } from './actions';
 
 const initialState = {
     posts: [],
@@ -12,7 +12,7 @@ const initialState = {
     },
 }
 
-export default function app(state = initialState, action){
+export default function app(state = initialState, action) {
     switch(action.type) {
         case CREATE_POST:
             return {
@@ -39,7 +39,7 @@ export default function app(state = initialState, action){
                 ...state,
                 posts: [
                     ...state.posts.map((post) => {
-                        if(action.postId === post.postId){
+                        if(action.postId === post.postId) {
                             return {
                                 ...post,
                                 photo: action.photo,
@@ -56,6 +56,34 @@ export default function app(state = initialState, action){
                     text: action.text,
                 }
             }
+        case LIKE_POST:
+            return {
+                ...state,
+                posts: [
+                    ...state.posts.map((post) => {
+                        if(action.postId === post.postId) {
+                            return {
+                                ...post,
+                                likes: action.likes,
+                            }
+                        } return post
+                    })
+                ]
+            }
+            case SHARE_POST:
+                return {
+                    ...state,
+                    posts: [
+                        ...state.posts.map((post) => {
+                            if(action.postId === post.postId) {
+                                return {
+                                    ...post,
+                                    share: action.share,
+                                }
+                            } return post
+                        })
+                    ]
+                }
     }
     return state;
 }
