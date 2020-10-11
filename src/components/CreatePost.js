@@ -23,7 +23,7 @@ export default function CreatePost() {
                 <CameraOutlined
                     style={{ margin: '5px' }}
                     onClick={
-                        () => dispatch(addPhoto(value))
+                        (value) => dispatch(addPhoto(value))
                     }
                 />
                 <CheckOutlined
