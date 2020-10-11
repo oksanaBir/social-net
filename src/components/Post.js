@@ -13,26 +13,28 @@ export default function Post({post}) {
 
     return(
         <PostWrapper postWrapper={true}>
-            <Text> {text}</Text>
+            <Text
+                margin={20}
+            >{text}</Text>
             <FlexBox direction={flexDirection.row} margin={15}>
                 <HeartOutlined
-                    style={{ margin: '5px' }}
+                    style={{ margin: '5px 0 5px 0' }}
                     value={likes}
                     onClick={
                         () => dispatch(likePost(postId, likes + 1))
                     }
                 />
-                <Text>{ likes }</Text>
+                <Text margin={5}>{ likes }</Text>
                 <ShareAltOutlined
-                    style={{ margin: '5px' }}
+                    style={{ margin: '5px 0 5px 0' }}
                     value={share}
                     onClick={
                         () => dispatch(sharePost(postId, share + 1))
                     }
                 />
-                <Text value={share}>{ share }</Text>
+                <Text margin={5}>{ share }</Text>
                 <CloseOutlined
-                    style={{ margin: '5px' }}
+                    style={{ marginRight: '720px' }}
                     onClick={
                         () => dispatch(deletePost(postId))
                     } 
