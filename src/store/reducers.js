@@ -17,12 +17,12 @@ export default function app(state = initialState, action) {
         case CREATE_POST:
             return {
                 posts: [
-                    ...state.posts,
                     {
                         ...state.post,
                         postId: action.postId,
                         date: action.date,
-                    }
+                    },
+                    ...state.posts,
                 ],
                 post: {
                     ...state.post,
