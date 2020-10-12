@@ -14,7 +14,7 @@ export default function Post({post}) {
     return(
         <PostWrapper postWrapper={true}>
             <CloseOutlined
-                    style={{ margin: '15px 0px 0px 705px' }}
+                    style={{ margin: '15px 0px 0px 710px' }}
                     onClick={
                         () => dispatch(deletePost(postId))
                     } 
