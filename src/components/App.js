@@ -21,8 +21,7 @@ export default function App() {
                             return (
                                 <Post key={post.postId} post={post} />
                             )
-                        })
-                        
+                        })   
                     }
                 </FlexBox>
             </FlexBox>
