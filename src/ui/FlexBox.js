@@ -1,5 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
+import PropTypes from 'prop-types';
 
 export const flexPositions = {
     start: 'flex-start',
@@ -18,10 +19,15 @@ export function FlexBox({
     direction = flexDirection.row,
     left = 0,
     margin = 0,
+    flexbox,
+    home
 }) {
     return(
         <div
-            className={classNames('flexbox')}
+            className={classNames({
+                flexbox,
+                home,
+            })}
             style={{
                 justifyContent: position,
                 flexDirection: direction,
@@ -32,4 +38,14 @@ export function FlexBox({
             {children}
         </div>
     );
+}
+
+FlexBox.propTypes = {
+    flexbox: PropTypes.bool,
+    home: PropTypes.bool,
+}
+
+FlexBox.defaultProps = {
+    flexbox: true,
+    home: false,
 }
