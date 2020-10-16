@@ -3,7 +3,7 @@ import MenuWrapper from '../ui/MenuWrapper';
 import Post from './Post';
 import CreatePost from './CreatePost';
 import "../styles/styles.less";
-import { FlexBox, margin, left } from '../ui/FlexBox';
+import { FlexBox, margin, left, flexbox, home } from '../ui/FlexBox';
 import { useSelector } from 'react-redux';
 
 export default function App() {
@@ -13,7 +13,7 @@ export default function App() {
     return (
         <>
             <MenuWrapper />
-            <FlexBox left={300} margin={50}>
+            <FlexBox home={true}>
                 <CreatePost key={post.postId} post={post}/>
                 <FlexBox>
                     {
