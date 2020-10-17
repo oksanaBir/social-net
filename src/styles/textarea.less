@@ -6,6 +6,13 @@
     width: 700px;
     border: @greenBorder;
     color: @green;
+
+    @media (max-width: 350px) {
+        position: relative;
+        width: 100%;
+        padding: 10px;
+        border-radius: 0;
+    }
 }
 
 .textarea:focus {
