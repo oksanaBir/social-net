@@ -14,11 +14,11 @@ export default function Post({post}) {
     return(
         <PostWrapper postWrapper={true}>
             <CloseOutlined
-                    style={{ margin: '15px 0px 0px 710px' }}
-                    onClick={
-                        () => dispatch(deletePost(postId))
-                    } 
-                />
+                style={{ margin: '15px 0 0 15px' }}
+                onClick={
+                    () => dispatch(deletePost(postId))
+                }
+            />
             <Text
                 margin={17}
             >{text}</Text>
