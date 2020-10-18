@@ -3,15 +3,15 @@ import MenuItem from './MenuItem';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
-export default function MenuWrapper({full, shrink}) {
+export default function MenuWrapper({full, hide}) {
     return (
         <div className={classNames({
             fullSidebar: full,
-            shrinkSidebar: shrink,
+            hideSidebar: hide,
         })}>
             <ul className={classNames({
                 fullMenu: full,
-                shrinkMenu: shrink,
+                hideMenu: hide,
             })}>
                 <MenuItem>Главная</MenuItem>
                 <MenuItem>Уведомления</MenuItem>
@@ -25,10 +25,10 @@ export default function MenuWrapper({full, shrink}) {
 
 MenuWrapper.propTypes = {
     full: PropTypes.bool,
-    shrink: PropTypes.bool,
+    hide: PropTypes.bool,
 }
 
 MenuWrapper.defaultProps = {
     full: true,
-    shrink: false,
+    hide: false,
 }
