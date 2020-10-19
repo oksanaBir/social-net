@@ -5,6 +5,7 @@ import CreatePost from './CreatePost';
 import "../styles/styles.less";
 import { FlexBox, margin, left, flexbox, home } from '../ui/FlexBox';
 import { useSelector } from 'react-redux';
+import Menu from './Menu';
 
 export default function App() {
     const post = useSelector(state => state.post);
@@ -12,7 +13,7 @@ export default function App() {
 
     return (
         <>
-            <MenuWrapper />
+            <Menu />
             <FlexBox home={true}>
                 <CreatePost key={post.postId} post={post}/>
                 <FlexBox>
