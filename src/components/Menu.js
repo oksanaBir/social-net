@@ -5,7 +5,7 @@ import Text from '../ui/Text';
 import MenuWrapper from '../ui/MenuWrapper';
 import MenuItem from '../ui/MenuItem';
 
-export default function Menu({ value }) {
+export default function Menu() {
     return(
         <MenuWrapper>
                 <MenuItem>Главная</MenuItem>
