@@ -3,7 +3,7 @@ import MenuItem from './MenuItem';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
-export default function MenuWrapper({full, hide}) {
+export default function MenuWrapper({full, hide, children}) {
     return (
         <div className={classNames({
             fullSidebar: full,
@@ -13,11 +13,7 @@ export default function MenuWrapper({full, hide}) {
                 fullMenu: full,
                 hideMenu: hide,
             })}>
-                <MenuItem>Главная</MenuItem>
-                <MenuItem>Уведомления</MenuItem>
-                <MenuItem>Сообщения</MenuItem>
-                <MenuItem>Закладки</MenuItem>
-                <MenuItem>Профиль</MenuItem>
+                {children}
             </ul>
         </div>
     );
