@@ -1,6 +1,5 @@
 import React from 'react';
-import classNames from 'classnames';
-import { FlexBox, flexDirection, flexPositions, margin } from '../ui/FlexBox';
+import { FlexBox, flexDirection, flexPosition } from '../ui/FlexBox';
 import { CheckOutlined, CameraOutlined } from '@ant-design/icons';
 import TextArea from '../ui/TextArea';
 import { useDispatch, useSelector } from 'react-redux';
@@ -19,7 +18,7 @@ export default function CreatePost() {
                     (value) => dispatch(addText(value))
                 }
             />
-            <FlexBox margin={15} position={flexPositions.end}>
+            <FlexBox margin={15} position={flexPosition.end}>
                 <CameraOutlined
                     style={{ margin: '5px' }}
                     onClick={

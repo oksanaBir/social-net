@@ -1,6 +1,5 @@
 import React from 'react';
-import classNames from 'classnames';
-import { FlexBox, flexDirection, flexPositions } from '../ui/FlexBox';
+import { FlexBox, flexDirection, flexPosition } from '../ui/FlexBox';
 import Text from '../ui/Text';
 import { HeartOutlined, ShareAltOutlined, CloseOutlined } from '@ant-design/icons';
 import PostWrapper from '../ui/PostWrapper';
@@ -30,7 +29,10 @@ export default function Post({post}) {
                         () => dispatch(likePost(postId, likes + 1))
                     }
                 />
-                <Text margin={5}>{ likes }</Text>
+                <Text
+                    margin={5}
+                    description={true}
+                >{ likes }</Text>
                 <ShareAltOutlined
                     style={{ margin: '5px 0 5px 10px' }}
                     value={share}
