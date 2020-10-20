@@ -2,7 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
-export const flexPositions = {
+export const flexPosition = {
     start: 'flex-start',
     center: 'center',
     end: 'flex-end',
@@ -15,12 +15,12 @@ export const flexDirection = {
 
 export function FlexBox({
     children,
-    position = flexPositions.start,
+    position = flexPosition.start,
     direction = flexDirection.row,
     left = 0,
     margin = 0,
     flexbox,
-    home
+    home,
 }) {
     return(
         <div
@@ -30,6 +30,7 @@ export function FlexBox({
             })}
             style={{
                 justifyContent: position,
+                alignItems: position,
                 flexDirection: direction,
                 margin: margin + 'px',
                 paddingLeft: left + 'px'
@@ -43,9 +44,11 @@ export function FlexBox({
 FlexBox.propTypes = {
     flexbox: PropTypes.bool,
     home: PropTypes.bool,
+    main: PropTypes.bool,
 }
 
 FlexBox.defaultProps = {
     flexbox: true,
     home: false,
+    main: false,
 }
