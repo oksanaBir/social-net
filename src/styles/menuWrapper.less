@@ -5,12 +5,17 @@
     height: 100%;
     border-right: @grayBorder;
 
-    @media (max-width: 500px) {
+    @media (max-width: 1101px) {
+        border-right: none;
+        border-bottom: @grayBorder;
+        position: relative;
+        width: 100%;
+    }
+
+    @media (max-width: 250px) {
         width: 100%;
         height: 350px;
-        border: none;
         margin-top: 10px;
-        position: relative;
     }
 }
 
@@ -29,9 +34,17 @@
     margin: 0px;
     padding: 50px 20px 0 30px;
 
-    @media (max-width: 500px) {
-        padding: 0;
+
+    @media (max-width: 1101px) {
+        flex-direction: row;
         width: 100%;
+        padding: 0;
+        justify-content: space-around;
+    }
+
+    @media (max-width: 250px) {
+        flex-direction: column;
+        height: auto;
     }
 }
 
