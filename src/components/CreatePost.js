@@ -11,7 +11,10 @@ export default function CreatePost() {
     const dispatch = useDispatch();
 
     return(
-        <FlexBox direction={flexDirection.column}>
+        <FlexBox
+            direction={flexDirection.column}
+            width={true}
+            position={flexPosition.end}>
             <TextArea
                 value={text}
                 onChange={
