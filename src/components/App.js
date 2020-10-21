@@ -17,11 +17,10 @@ export default function App() {
                 home={true}
                 position={flexPosition.center}
                 direction={flexDirection.column}
-                style= {{alignItems: 'center'}}
             >
                 <CreatePost key={post.postId} post={post}/>
                 <FlexBox
-                    style={{ width: '100%'}}
+                    width={true}
                     direction={flexDirection.column}
                     position={flexPosition.center}
                 >
