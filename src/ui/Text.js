@@ -3,9 +3,9 @@ import classNames from 'classnames';
 
 export default function Text({children, margin = 0}) {
     return(
-        <div
+        <p
             className={classNames('text')}
             style={{ margin: margin + 'px' }}
-        >{children}</div>
+        >{children}</p>
     );
 }
