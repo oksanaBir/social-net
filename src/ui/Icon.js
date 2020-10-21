@@ -1,13 +1,28 @@
 import React from 'react';
 import classNames from 'classnames';
+import PropTypes from 'prop-types';
 
-export default function Icon({children, onClick}) {
+export default function Icon({children, onClick, icon, disabled}) {
     return(
-        <div
-            className={classNames('icon')}
+        <button
+            className={classNames({
+                icon,
+                disabled,
+            })}
             onClick={onClick}
+            disabled={disabled}
         >
             {children}
-        </div>
+        </button>
     );
+}
+
+Icon.propTypes = {
+    icon: PropTypes.bool,
+    disabled: PropTypes.bool,
+}
+
+Icon.defaultProps = {
+    icon: true,
+    disabled: false,
 }
