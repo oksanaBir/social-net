@@ -13,15 +13,16 @@ export default function CreatePost() {
     return(
         <FlexBox
             direction={flexDirection.column}
-            width={true}
+            createPost={true}
             position={flexPosition.end}>
             <TextArea
                 value={text}
                 onChange={
                     (value) => dispatch(addText(value))
+                    
                 }
             />
-            <FlexBox margin={15} position={flexPosition.end}>
+            <FlexBox margin={15}>
                 <CameraOutlined
                     style={{ margin: '5px' }}
                     onClick={

@@ -20,7 +20,7 @@ export default function App() {
             >
                 <CreatePost key={post.postId} post={post}/>
                 <FlexBox
-                    width={true}
+                    newsLine={true}
                     direction={flexDirection.column}
                     position={flexPosition.center}
                 >
