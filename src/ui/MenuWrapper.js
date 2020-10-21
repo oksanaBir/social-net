@@ -1,5 +1,4 @@
 import React from 'react';
-import MenuItem from './MenuItem';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
