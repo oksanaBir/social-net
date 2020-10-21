@@ -12,15 +12,17 @@ export default function Post({post}) {
 
     return(
         <PostWrapper postWrapper={true}>
-            <CloseOutlined
-                style={{ margin: '15px 0 0 15px' }}
-                onClick={
-                    () => dispatch(deletePost(postId))
-                }
-            />
+            <FlexBox position={flexPosition.end}>
+                <CloseOutlined
+                    style={{ margin: '15px 15px 0 15px' }}
+                    onClick={
+                        () => dispatch(deletePost(postId))
+                    }
+                />
+            </FlexBox>
             <Text
-                margin={17}
-            >{text}</Text>
+                    margin={17}
+                >{text}</Text>
             <FlexBox direction={flexDirection.row} margin={15}>
                 <HeartOutlined
                     style={{ margin: '5px 0 5px 0' }}
