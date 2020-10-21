@@ -4,10 +4,11 @@ import { CheckOutlined, CameraOutlined } from '@ant-design/icons';
 import TextArea from '../ui/TextArea';
 import { useDispatch, useSelector } from 'react-redux';
 import { addText, addPhoto, createPost } from '../store/actions';
+import Icon from '../ui/Icon';
 
 export default function CreatePost() {
     const post = useSelector(state => state.post);
-    const {text} = post;
+    const {text, validation} = post;
     const dispatch = useDispatch();
 
     return(
@@ -17,9 +18,10 @@ export default function CreatePost() {
             position={flexPosition.end}>
             <TextArea
                 value={text}
+                validation={validation}
                 onChange={
                     (value) => dispatch(addText(value))
-                    
+
                 }
             />
             <FlexBox margin={15}>
@@ -29,12 +31,14 @@ export default function CreatePost() {
                         (value) => dispatch(addPhoto(value))
                     }
                 />
-                <CheckOutlined
-                    style={{ margin: '5px' }}
+                <Icon
+                    disabled={validation === false}
                     onClick={
                         () => dispatch(createPost())
                     }
-                />
+                >
+                    <CheckOutlined/>
+                </Icon>
             </FlexBox>
         </FlexBox>
     );

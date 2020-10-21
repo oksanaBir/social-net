@@ -9,6 +9,7 @@ const initialState = {
         date: '',
         likes: 0,
         share: 0,
+        validation: true,
     },
 }
 
@@ -54,6 +55,7 @@ export default function app(state = initialState, action) {
                 post: {
                     ...state.post,
                     text: action.text,
+                    validation: action.validation,
                 }
             }
         case LIKE_POST:

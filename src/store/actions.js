@@ -24,6 +24,7 @@ export const addPhoto = (value) => ({
 export const addText = (value) => ({
     type: ADD_TEXT,
     text: value,
+    validation: !(value.length === 0 || !value.trim())
 });
 
 export const likePost = (postId, value) => ({
