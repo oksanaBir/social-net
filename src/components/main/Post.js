@@ -1,10 +1,10 @@
 import React from 'react';
-import { FlexBox, flexDirection, flexPosition } from '../ui/FlexBox';
-import Text from '../ui/Text';
+import { FlexBox, flexDirection, flexPosition } from '../../ui/FlexBox';
+import Text from '../../ui/Text';
 import { HeartOutlined, ShareAltOutlined, CloseOutlined } from '@ant-design/icons';
-import PostWrapper from '../ui/PostWrapper';
+import PostWrapper from '../../ui/PostWrapper';
 import { useDispatch, useSelector } from 'react-redux';
-import { likePost, sharePost, deletePost } from '../store/actions';
+import { likePost, sharePost, deletePost } from '../../store/actions';
 
 export default function Post({post}) {
     const {text, likes, share, postId} = post;

@@ -1,10 +1,10 @@
 import React from 'react';
-import { FlexBox, flexDirection, flexPosition } from '../ui/FlexBox';
+import { FlexBox, flexDirection, flexPosition } from '../../ui/FlexBox';
 import { CheckOutlined, CameraOutlined } from '@ant-design/icons';
-import TextArea from '../ui/TextArea';
+import TextArea from '../../ui/TextArea';
 import { useDispatch, useSelector } from 'react-redux';
-import { addText, addPhoto, createPost } from '../store/actions';
-import Icon from '../ui/Icon';
+import { addText, addPhoto, createPost } from '../../store/actions';
+import Icon from '../../ui/Icon';
 
 export default function CreatePost() {
     const post = useSelector(state => state.post);
@@ -25,12 +25,13 @@ export default function CreatePost() {
                 }
             />
             <FlexBox margin={15}>
-                <CameraOutlined
-                    style={{ margin: '5px' }}
+                <Icon
                     onClick={
                         (value) => dispatch(addPhoto(value))
                     }
-                />
+                > 
+                    <CameraOutlined/>
+                </Icon>
                 <Icon
                     disabled={validation === false}
                     onClick={

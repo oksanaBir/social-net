@@ -1,9 +1,6 @@
 import React from 'react';
-import classNames from 'classnames';
-import { FlexBox, flexDirection, flexPositions } from '../ui/FlexBox';
-import Text from '../ui/Text';
-import MenuWrapper from '../ui/MenuWrapper';
-import MenuItem from '../ui/MenuItem';
+import MenuWrapper from '../../ui/MenuWrapper';
+import MenuItem from '../../ui/MenuItem';
 
 export default function Menu() {
     return(
