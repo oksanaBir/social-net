@@ -5,13 +5,13 @@ export const ADD_TEXT = 'ADD_TEXT';
 export const LIKE_POST = 'LIKE_POST';
 export const SHARE_POST = 'SHARE_POST';
 
-export const createPost = (postId) => ({
+export const createPost = () => ({
     postId: Date.now().toString() + Math.random().toString(),
     type: CREATE_POST,
     date: Date.now(),
 });
 
-export const deletePost = postId => ({
+export const deletePost = (postId) => ({
     postId,
     type: DELETE_POST,
 });
