@@ -9,7 +9,7 @@ const initialState = {
         date: '',
         likes: 0,
         share: 0,
-        validation: true,
+        validation: false,
     },
 }
 
@@ -28,6 +28,7 @@ export default function app(state = initialState, action) {
                 post: {
                     ...state.post,
                     text: '',
+                    validation: false,
                 }
             }
         case DELETE_POST:
