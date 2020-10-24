@@ -3,7 +3,7 @@ import Post from './Post';
 import CreatePost from './CreatePost';
 import { FlexBox, flexDirection, flexPosition } from '../../ui/FlexBox';
 import { useSelector } from 'react-redux';
-import Menu from './Menu';
+import Menu from '../Menu';
 
 export default function Main() {
     const post = useSelector(state => state.post);

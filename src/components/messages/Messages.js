@@ -1,5 +1,7 @@
 import React from 'react';
 import CreateMessage from './CreateMessage';
+import { FlexBox, flexDirection, flexPosition } from '../../ui/FlexBox';
+import Menu from '../Menu';
 
 export default function Messages() {
     return(

@@ -1,6 +1,6 @@
 import React from 'react';
-import MenuWrapper from '../../ui/MenuWrapper';
-import MenuItem from '../../ui/MenuItem';
+import MenuWrapper from '../ui/MenuWrapper';
+import MenuItem from '../ui/MenuItem';
 
 export default function Menu() {
     return(
