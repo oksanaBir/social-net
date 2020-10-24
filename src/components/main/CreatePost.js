@@ -15,7 +15,8 @@ export default function CreatePost() {
         <FlexBox
             direction={flexDirection.column}
             createPost={true}
-            position={flexPosition.end}>
+            position={flexPosition.end}
+        >
             <TextArea
                 value={text}
                 validation={validation}
