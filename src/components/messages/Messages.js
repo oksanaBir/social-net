@@ -1,10 +1,17 @@
 import React from 'react';
-import Message from './Message';
+import CreateMessage from './CreateMessage';
 
 export default function Messages() {
     return(
         <>
-            <Message />
+            <Menu />
+            <FlexBox
+                home={true}
+                position={flexPosition.center}
+                direction={flexDirection.column}
+            >
+                <CreateMessage />
+            </FlexBox>
         </>
     )
 }
