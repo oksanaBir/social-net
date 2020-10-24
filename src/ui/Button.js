@@ -2,24 +2,13 @@ import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
-export default function Button({children, onClick, mainButton}) {
+export default function Button({children, onClick}) {
     return (
         <div
-            className={classNames({
-                button: true,
-                mainButton,
-            })}
+            className={classNames('button')}
             onClick={onClick}
         >
             {children}
         </div>
     );
-}
-
-Button.propTypes = {
-    mainButton: PropTypes.bool,
-}
-
-Button.defaultProps = {
-    mainButton: false,
 }
