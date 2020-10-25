@@ -20,17 +20,17 @@ export function FlexBox({
     left = 0,
     margin = 0,
     flexbox,
-    home,
-    createPost,
-    newsLine
+    mainBlock,
+    createField,
+    feed
 }) {
     return(
         <div
             className={classNames({
                 flexbox,
-                home,
-                createPost,
-                newsLine,
+                mainBlock,
+                createField,
+                feed,
             })}
             style={{
                 justifyContent: position,
@@ -47,14 +47,14 @@ export function FlexBox({
 
 FlexBox.propTypes = {
     flexbox: PropTypes.bool,
-    home: PropTypes.bool,
-    createPost: PropTypes.bool,
-    newsLine: PropTypes.bool,
+    mainBlock: PropTypes.bool,
+    createField: PropTypes.bool,
+    feed: PropTypes.bool,
 }
 
 FlexBox.defaultProps = {
     flexbox: true,
-    home: false,
-    createPost: false,
-    newsLine: false,
+    mainBlock: false,
+    createField: false,
+    feed: false,
 }

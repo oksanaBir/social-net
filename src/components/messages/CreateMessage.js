@@ -9,10 +9,10 @@ export default function CreateMessage() {
         <>
             <FlexBox
                 direction={flexDirection.column}
-                createPost={true}
+                createField={true}
                 position={flexPosition.end}
             > 
-                <TextArea />
+                <TextArea height={30} />
                 <FlexBox
                 >
                     <Button>Отправить</Button>

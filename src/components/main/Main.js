@@ -13,13 +13,13 @@ export default function Main() {
         <>
             <Menu />
             <FlexBox
-                home={true}
+                mainBlock={true}
                 position={flexPosition.center}
                 direction={flexDirection.column}
             >
                 <CreatePost key={post.postId} post={post}/>
                 <FlexBox
-                    newsLine={true}
+                    feed={true}
                     direction={flexDirection.column}
                     position={flexPosition.center}
                 >
