@@ -2,7 +2,6 @@ import React from 'react';
 import TextArea from '../../ui/TextArea';
 import {FlexBox, flexPosition, flexDirection} from '../../ui/FlexBox';
 import Button from '../../ui/Button';
-import Icon from '../../ui/Icon';
 import { useDispatch, useSelector } from 'react-redux';
 
 export default function CreateMessage() {

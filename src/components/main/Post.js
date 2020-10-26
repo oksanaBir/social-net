@@ -2,7 +2,7 @@ import React from 'react';
 import { FlexBox, flexDirection, flexPosition } from '../../ui/FlexBox';
 import Text from '../../ui/Text';
 import { HeartOutlined, ShareAltOutlined, CloseOutlined } from '@ant-design/icons';
-import PostWrapper from '../../ui/PostWrapper';
+import ElementWrapper from '../../ui/ElementWrapper';
 import { useDispatch, useSelector } from 'react-redux';
 import { likePost, sharePost, deletePost } from '../../store/actions';
 
@@ -11,7 +11,7 @@ export default function Post({post}) {
     const dispatch = useDispatch();
 
     return(
-        <PostWrapper postWrapper={true}>
+        <ElementWrapper postWrapper={true}>
             <FlexBox position={flexPosition.end}>
                 <CloseOutlined
                     style={{ margin: '15px 15px 0 15px' }}
@@ -44,6 +44,6 @@ export default function Post({post}) {
                 />
                 <Text margin={5}>{ share }</Text>
             </FlexBox>
-        </PostWrapper>
+        </ElementWrapper>
     );
 }
