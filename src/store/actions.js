@@ -4,6 +4,7 @@ export const ADD_PHOTO = 'ADD_PHOTO';
 export const ADD_TEXT = 'ADD_TEXT';
 export const LIKE_POST = 'LIKE_POST';
 export const SHARE_POST = 'SHARE_POST';
+export const SEND_MESSAGE = 'SEND_MESSAGE';
 
 export const createPost = () => ({
     postId: Date.now().toString() + Math.random().toString(),
@@ -37,4 +38,10 @@ export const sharePost = (postId, value) => ({
     postId,
     type: SHARE_POST,
     share: value,
+});
+
+export const sendMessage = () => ({
+    messageId: Date.now().toString() + Math.random().toString(),
+    type: SEND_MESSAGE,
+    date: Date.now(),
 });

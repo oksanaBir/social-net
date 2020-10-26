@@ -11,6 +11,14 @@ const initialState = {
         share: 0,
         validation: false,
     },
+    messages: [],
+    message: {
+        messageId: '',
+        recipientId: '',
+        recipientName: '',
+        date: '',
+        text: '',
+    }
 }
 
 export default function app(state = initialState, action) {
@@ -57,7 +65,7 @@ export default function app(state = initialState, action) {
                     ...state.post,
                     text: action.text,
                     validation: action.validation,
-                }
+                },
             }
         case LIKE_POST:
             return {
