@@ -1,34 +1,37 @@
-import { CREATE_POST, DELETE_POST, ADD_PHOTO, ADD_TEXT, LIKE_POST, SHARE_POST } from './actions';
+import { CREATE_ELEMENT, DELETE_POST, ADD_PHOTO, ADD_TEXT, LIKE_POST, SHARE_POST } from './actions';
 
 const initialState = {
     posts: [],
+    messages: [],
+
     post: {
-        postId: '',
+        id: '',
         text: '',
+        authorId: '',
         photo: '',
         date: '',
         likes: 0,
         share: 0,
         validation: false,
     },
-    messages: [],
     message: {
-        messageId: '',
+        id: '',
         recipientId: '',
-        recipientName: '',
+        recipientName: 'Oksana',
         date: '',
         text: '',
-    }
+        validation: false,
+    },
 }
 
 export default function app(state = initialState, action) {
     switch(action.type) {
-        case CREATE_POST:
+        case CREATE_ELEMENT:
             return {
                 posts: [
                     {
                         ...state.post,
-                        postId: action.postId,
+                        id: action.id,
                         date: action.date,
                     },
                     ...state.posts,
@@ -37,7 +40,7 @@ export default function app(state = initialState, action) {
                     ...state.post,
                     text: '',
                     validation: false,
-                }
+                },
             }
         case DELETE_POST:
             return {

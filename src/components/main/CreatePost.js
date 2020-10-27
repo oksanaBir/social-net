@@ -3,7 +3,7 @@ import { FlexBox, flexDirection, flexPosition } from '../../ui/FlexBox';
 import { CheckOutlined, CameraOutlined } from '@ant-design/icons';
 import TextArea from '../../ui/TextArea';
 import { useDispatch, useSelector } from 'react-redux';
-import { addText, addPhoto, createPost } from '../../store/actions';
+import { addText, addPhoto, createElement } from '../../store/actions';
 import Icon from '../../ui/Icon';
 
 export default function CreatePost() {
@@ -36,7 +36,7 @@ export default function CreatePost() {
                 <Icon
                     disabled={validation === false}
                     onClick={
-                        () => dispatch(createPost())
+                        () => dispatch(createElement())
                     }
                 >
                     <CheckOutlined/>

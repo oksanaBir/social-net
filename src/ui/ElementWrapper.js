@@ -3,7 +3,7 @@ import classNames from 'classnames';
 
 export default function ElementWrapper({ children }) {
     return(
-        <div className={classNames('postWrapper')}>
+        <div className={classNames('elementWrapper')}>
             {children}
         </div>
     );

@@ -3,9 +3,10 @@ import TextArea from '../../ui/TextArea';
 import {FlexBox, flexPosition, flexDirection} from '../../ui/FlexBox';
 import Button from '../../ui/Button';
 import { useDispatch, useSelector } from 'react-redux';
+import { createElement, addText } from '../../store/actions';
 
 export default function CreateMessage() {
-    const message = useSelector(state => state.message);
+    const elements = useSelector(state => state.element);
     const {text, validation} = message;
     const dispatch = useDispatch();
 
@@ -25,7 +26,10 @@ export default function CreateMessage() {
                 />
                 <FlexBox
                 >
-                    <Button>Отправить</Button>
+                    <Button
+                        disabled={validation === false}
+                        onClick={() => dispatch(createElement())}
+                    >Отправить</Button>
                 </FlexBox>
             </FlexBox>
         </>
