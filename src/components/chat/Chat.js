@@ -1,15 +1,15 @@
 import React from 'react';
-import Post from './Post';
-import CreatePost from './CreatePost';
+import CreateMessage from './CreateMessage';
 import { FlexBox, flexDirection, flexPosition } from '../../ui/FlexBox';
-import { useSelector } from 'react-redux';
 import Menu from '../Menu';
+import { useSelector } from 'react-redux';
+import Message from './Message';
 
-export default function Main() {
-    const post = useSelector(state => state.post);
-    const posts = useSelector(state => state.posts);
+export default function Messages() {
+    const message = useSelector(state => state.message);
+    const messages = useSelector(state => state.messages);
 
-    return (
+    return(
         <>
             <Menu />
             <FlexBox
@@ -17,21 +17,21 @@ export default function Main() {
                 position={flexPosition.center}
                 direction={flexDirection.column}
             >
-                <CreatePost key={post.postId} post={post}/>
+                <CreateMessage key={message.id} message={message}/>
                 <FlexBox
                     feed={true}
                     direction={flexDirection.column}
                     position={flexPosition.center}
                 >
                     {
-                        posts.map((post) => {
+                        messages.map((message) => {
                             return (
-                                <Post key={post.postId} post={post} />
+                                <Message key={message.id} message={message} />
                             )
                         })   
                     }
                 </FlexBox>
             </FlexBox>
         </>
-    );
+    )
 }
