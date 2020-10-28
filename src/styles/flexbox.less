@@ -2,36 +2,13 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-}
 
-.mainBlock {
-    padding: 30px 30px 30px 330px !important;
-
-    @media (max-width: 1001px) {
-        padding: 20px !important;
-        top: 220px;
-        display: block;
-    }
-
-    @media (max-width: 360px) {
-        width: 100%;
-        top: 400px;
-        padding: 0 !important;
+    @media(max-width: 1070px) {
+        flex-direction: row !important;
     }
 }
 
-.createField {
-    @media (max-width: 1070px) {
-        width: @width;
-    }
-
-    @media (max-width: 1001px) {
-        width: 100%;
-        flex-wrap: nowrap;
-    }
-}
-
-.feed {
+.posts {
     @media (max-width: 1070px) {
         width: 100%;
         flex-direction: row !important;
