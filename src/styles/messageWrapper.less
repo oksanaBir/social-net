@@ -1,0 +1,17 @@
+.messageWrapper {
+    background-color: rgb(245, 241, 241);
+    position: relative;
+    border-radius: 10px;
+    width: 740px;
+    height: auto;
+    margin: 20px 0 20px 0;
+    text-overflow: clip;
+
+    @media (max-width: 1070px) {
+        width: @width;
+    }
+
+    @media (max-width: 500px) {
+        margin: @margin;
+    }
+}
