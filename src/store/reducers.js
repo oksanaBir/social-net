@@ -1,4 +1,14 @@
-import { CREATE_ELEMENT, DELETE_POST, ADD_PHOTO, ADD_TEXT, LIKE_POST, SHARE_POST } from './actions';
+import {
+    PUBLISH_POST,
+    DELETE_POST,
+    CHANGE_POST_PHOTO,
+    CHANGE_POST_TEXT,
+    LIKE_POST,
+    SHARE_POST,
+    SEND_MESSAGE,
+    CHANGE_MESSAGE_TEXT,
+    DELETE_MESSAGE,
+} from './actions';
 
 const initialState = {
     posts: [],
@@ -17,7 +27,7 @@ const initialState = {
     message: {
         id: '',
         recipientId: '',
-        recipientName: 'Oksana',
+        recipientName: '',
         date: '',
         text: '',
         validation: false,
@@ -26,7 +36,7 @@ const initialState = {
 
 export default function app(state = initialState, action) {
     switch(action.type) {
-        case CREATE_ELEMENT:
+        case PUBLISH_POST:
             return {
                 posts: [
                     {
@@ -40,14 +50,15 @@ export default function app(state = initialState, action) {
                     ...state.post,
                     text: '',
                     validation: false,
+                    photo: '',
                 },
             }
         case DELETE_POST:
             return {
                 ...state,
-                posts: state.posts.filter(post => post.postId != action.postId),
+                posts: state.posts.filter(post => post.id != action.id),
             }
-        case ADD_PHOTO:
+        case CHANGE_POST_PHOTO:
             return {
                 ...state,
                 posts: [
@@ -61,7 +72,7 @@ export default function app(state = initialState, action) {
                     })
                 ]
             }
-        case ADD_TEXT:
+        case CHANGE_POST_TEXT:
             return {
                 ...state,
                 post: {
@@ -98,6 +109,22 @@ export default function app(state = initialState, action) {
                         })
                     ]
                 }
+            case SEND_MESSAGE:
+            return {
+                messages: [
+                    {
+                        ...state.message,
+                        id: action.id,
+                        date: action.date,
+                    },
+                    ...state.messages,
+                ],
+                message: {
+                    ...state.message,
+                    text: '',
+                    validation: false,
+                },
+            }
     }
     return state;
 }
