@@ -1,12 +1,12 @@
 import React from 'react';
 import "../styles/styles.less";
-import Main from '../components/main/Main';
-import Messages from '../components/messages/Messages';
+import Feed from './feed/Feed';
+import Chat from './chat/Chat';
 
 export default function App() {
     return (
         <>
-            <Messages />
+            <Feed />
         </>
     );
 }
