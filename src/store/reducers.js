@@ -86,7 +86,7 @@ export default function app(state = initialState, action) {
                 ...state,
                 posts: [
                     ...state.posts.map((post) => {
-                        if(action.postId === post.postId) {
+                        if(action.id === post.id) {
                             return {
                                 ...post,
                                 likes: action.likes,
@@ -95,21 +95,21 @@ export default function app(state = initialState, action) {
                     })
                 ]
             }
-            case SHARE_POST:
-                return {
-                    ...state,
-                    posts: [
-                        ...state.posts.map((post) => {
-                            if(action.postId === post.postId) {
-                                return {
-                                    ...post,
-                                    share: action.share,
-                                }
-                            } return post
-                        })
-                    ]
-                }
-            case SEND_MESSAGE:
+        case SHARE_POST:
+            return {
+                ...state,
+                posts: [
+                    ...state.posts.map((post) => {
+                        if(action.id === post.id) {
+                            return {
+                                ...post,
+                                share: action.share,
+                            }
+                        } return post
+                    })
+                ]
+            }
+        case SEND_MESSAGE:
             return {
                 messages: [
                     {
@@ -125,6 +125,20 @@ export default function app(state = initialState, action) {
                     validation: false,
                 },
             }
-    }
+        case CHANGE_MESSAGE_TEXT:
+            return {
+                ...state,
+                message: {
+                    ...state.message,
+                    text: action.text,
+                    validation: action.validation,
+                },
+            }
+        case DELETE_MESSAGE:
+            return {
+                ...state,
+                messages: state.messages.filter(message => message.id != action.id),
+            }
+        }
     return state;
 }
