@@ -1,0 +1,13 @@
+.field {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    @media (max-width: 1070px) {
+        width: @width;
+    }
+
+    @media (max-width: 1001px) {
+        align-items: flex-start;    
+    }
+}
