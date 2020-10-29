@@ -1,5 +1,6 @@
 import React from 'react';
 import { FlexBox, flexDirection, flexPosition } from '../../ui/FlexBox';
+import Field from '../../ui/Field';
 import { CheckOutlined, CameraOutlined } from '@ant-design/icons';
 import TextArea from '../../ui/TextArea';
 import { useDispatch, useSelector } from 'react-redux';
@@ -12,21 +13,18 @@ export default function CreatePost() {
     const dispatch = useDispatch();
 
     return(
-        <FlexBox
-            createField={true}
-            direction={flexDirection.column}
-            createPost={true}
-            position={flexPosition.end}
-        >
+        <Field>
             <TextArea
                 value={text}
                 validation={validation}
                 onChange={
                     (value) => dispatch(changePostText(value))
-
                 }
             />
-            <FlexBox margin={15}>
+            <FlexBox
+                margin={15}
+                position={flexPosition.end}
+            >
                 <Icon
                     onClick={
                         (value) => dispatch(changePostPhoto(value))
@@ -43,6 +41,6 @@ export default function CreatePost() {
                     <CheckOutlined/>
                 </Icon>
             </FlexBox>
-        </FlexBox>
+        </Field>
     );
 }
