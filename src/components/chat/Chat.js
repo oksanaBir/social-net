@@ -1,7 +1,8 @@
 import React from 'react';
-import CreateMessage from './CreateMessage';
+import MessageField from './MessageField';
 import { FlexBox, flexDirection, flexPosition } from '../../ui/FlexBox';
 import Menu from '../Menu';
+import FeedWrapper from '../../ui/FeedWrapper';
 import { useSelector } from 'react-redux';
 import Message from './Message';
 
@@ -12,14 +13,9 @@ export default function Messages() {
     return(
         <>
             <Menu />
-            <FlexBox
-                mainBlock={true}
-                position={flexPosition.center}
-                direction={flexDirection.column}
-            >
-                <CreateMessage key={message.id} message={message}/>
+            <FeedWrapper>
+                <MessageField key={message.id} message={message} />
                 <FlexBox
-                    feed={true}
                     direction={flexDirection.column}
                     position={flexPosition.center}
                 >
@@ -31,7 +27,7 @@ export default function Messages() {
                         })   
                     }
                 </FlexBox>
-            </FlexBox>
+            </FeedWrapper>
         </>
     )
 }
