@@ -20,9 +20,7 @@ export default function Post({post}) {
                     }
                 />
             </FlexBox>
-            <Text
-                    margin={17}
-                >{text}</Text>
+            <Text margin={17}>{ text }</Text>
             <FlexBox direction={flexDirection.row} margin={15}>
                 <HeartOutlined
                     style={{ margin: '5px 0 5px 0' }}
