@@ -55,7 +55,7 @@ export const deleteMessage = (id) => ({
 });
 
 export const changeMessageText = (value) => ({
-    type: CHANGE_MESAAGE_TEXT,
+    type: CHANGE_MESSAGE_TEXT,
     text: value,
     validation: !(value.length === 0 || !value.trim()),
 });
