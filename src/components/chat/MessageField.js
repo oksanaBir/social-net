@@ -20,7 +20,10 @@ export default function MessageField() {
                     (value) => dispatch(changeMessageText(value))
                 }
             />
-            <FlexBox>
+            <FlexBox
+                margin={15}
+                position={flexPosition.end}
+            >
                 <Button
                     disabled={validation === false}
                     onClick={() => dispatch(sendMessage())}
