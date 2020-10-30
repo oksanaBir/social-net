@@ -1,9 +1,9 @@
 import React from 'react';
 import classNames from 'classnames';
 
-export default function FeedWrapper({children}) {
+export default function MainFeedWrapper({children}) {
     return(
-        <div className={classNames('feedWrapper')}>
+        <div className={classNames('mainFeedWrapper')}>
             {children}
         </div>
     );
