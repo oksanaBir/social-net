@@ -1,10 +1,12 @@
 import React from 'react';
 import TextArea from '../../ui/TextArea';
 import Field from '../../ui/Field'; 
-import { FlexBox, flexPosition, flexDirection } from '../../ui/FlexBox';
+import { FlexBox, flexPosition } from '../../ui/FlexBox';
 import Button from '../../ui/Button';
 import { useDispatch, useSelector } from 'react-redux';
 import { sendMessage, changeMessageText } from '../../store/actions';
+import { CheckOutlined } from '@ant-design/icons';
+import Icon from '../../ui/Icon';
 
 export default function MessageField() {
     const message = useSelector(state => state.message);
@@ -12,7 +14,7 @@ export default function MessageField() {
     const dispatch = useDispatch();
 
     return(
-        <Field> 
+        <Field reverse={true}> 
             <TextArea
                 value={text}
                 validation={validation}
@@ -24,10 +26,14 @@ export default function MessageField() {
                 margin={15}
                 position={flexPosition.end}
             >
-                <Button
+                <Icon
                     disabled={validation === false}
-                    onClick={() => dispatch(sendMessage())}
-                >Отправить</Button>
+                    onClick={
+                        () => dispatch(sendMessage())
+                    }
+                >
+                    <CheckOutlined/>
+                </Icon>
             </FlexBox>
         </Field>
     )
