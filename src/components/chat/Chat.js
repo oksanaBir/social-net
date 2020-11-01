@@ -10,11 +10,11 @@ export default function Messages() {
     const messages = useSelector(state => state.messages);
 
     return (
-        <MainFeedWrapper>
+        <MainFeedWrapper reverse={true}>
             <MessageField key={message.id} message={message} />
             <FlexBox
                 direction={flexDirection.column}
-                position={flexPosition.center}
+                position={flexPosition.end}
             >
                 {
                     messages.map((message) => {
