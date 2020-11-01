@@ -23,7 +23,7 @@ export default function Message({message}) {
                     }
                 /> */}
             </FlexBox>
-            <Text margin={17}>{ text }</Text>
+            <Text margin={14}>{ text }</Text>
         </MessageWrapper>
     )
 }
