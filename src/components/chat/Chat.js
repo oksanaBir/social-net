@@ -1,5 +1,6 @@
 import React from 'react';
 import MessageField from './MessageField';
+import ChatWrapper from  '../../ui/ChatWrapper';
 import { FlexBox, flexDirection, flexPosition } from '../../ui/FlexBox';
 import MainFeedWrapper from '../../ui/MainFeedWrapper';
 import { useSelector } from 'react-redux';
@@ -12,10 +13,7 @@ export default function Messages() {
     return (
         <MainFeedWrapper reverse={true}>
             <MessageField key={message.id} message={message} />
-            <FlexBox
-                direction={flexDirection.column}
-                position={flexPosition.end}
-            >
+            <ChatWrapper>
                 {
                     messages.map((message) => {
                         return (
@@ -23,7 +21,7 @@ export default function Messages() {
                         )
                     })   
                 }
-            </FlexBox>
+            </ChatWrapper>
         </MainFeedWrapper>
     )
 }
