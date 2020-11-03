@@ -5,7 +5,7 @@ import { CheckOutlined, CameraOutlined } from '@ant-design/icons';
 import TextArea from '../../ui/TextArea';
 import { useDispatch, useSelector } from 'react-redux';
 import { changePostText, changePostPhoto, publishPost } from '../../store/actions';
-import Icon from '../../ui/Icon';
+import { Button } from 'antd';
 
 export default function CreatePost() {
     const post = useSelector(state => state.post);
@@ -25,21 +25,29 @@ export default function CreatePost() {
                 margin={15}
                 position={flexPosition.end}
             >
-                <Icon
+                <Button
+                    icon={<CameraOutlined />}
                     onClick={
                         (value) => dispatch(changePostPhoto(value))
                     }
-                > 
-                    <CameraOutlined/>
-                </Icon>
-                <Icon
+                    style={{
+                        border: 'none',
+                        margin: '5px',
+                        backgroundColor: 'transparent'
+                    }}
+                />
+                <Button
+                    icon={<CheckOutlined />}
                     disabled={validation === false}
                     onClick={
                         () => dispatch(publishPost())
                     }
-                >
-                    <CheckOutlined/>
-                </Icon>
+                    style={{
+                        border: 'none',
+                        margin: '5px',
+                        backgroundColor: 'transparent'
+                    }}
+                />
             </FlexBox>
         </Field>
     );
