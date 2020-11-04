@@ -12,7 +12,6 @@ export default function Messages() {
 
     return (
         <MainFeedWrapper reverse={true}>
-            <MessageField key={message.id} message={message} />
             <ChatWrapper>
                 {
                     messages.map((message) => {
@@ -22,6 +21,7 @@ export default function Messages() {
                     })   
                 }
             </ChatWrapper>
+            <MessageField key={message.id} message={message} />
         </MainFeedWrapper>
     )
 }
