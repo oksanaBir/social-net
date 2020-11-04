@@ -23,7 +23,6 @@ export default function MessageField() {
                 }
             />
             <FlexBox
-                margin={15}
                 position={flexPosition.end}
             >
                 <Button
