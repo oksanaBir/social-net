@@ -27,17 +27,18 @@ export default function MessageField() {
                 position={flexPosition.end}
             >
                 <Button
-                    icon={<CheckOutlined />}
                     disabled={validation === false}
                     onClick={
                         () => dispatch(sendMessage())
                     }
                     style={{
                         border: 'none',
+                        padding: '10px',
                         margin: '5px',
-                        backgroundColor: 'transparent'
+                        borderRadius: '15px',
+                        color: '#43D694'
                     }}
-                />
+                >Отправить</Button>
             </FlexBox>
         </Field>
     )
