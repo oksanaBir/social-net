@@ -1,6 +1,7 @@
 .mainFeedWrapper {
     padding: 30px 30px 30px 330px !important;
     display: flex;
+    flex-direction: column;
     align-items: center;
 
     @media (max-width: 1070px) {
@@ -22,4 +23,12 @@
 
 .reverse {
     flex-direction: column-reverse;
+    bottom: 0px;
+    left: @fullSidebarWidth;
+    padding: 50px;
+    position: fixed;
+
+    @media (max-width: 1001px) {
+        left: 0px;
+    }
 }
