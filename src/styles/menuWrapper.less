@@ -5,6 +5,10 @@
     height: 100%;
     border-right: @grayBorder;
 
+    @media (max-width: 1070px) {
+        width: 240px;
+    }
+
     @media (max-width: 1001px) {
         border-right: none;
         border-bottom: @grayBorder;
@@ -33,7 +37,6 @@
     list-style-type: none;
     margin: 0px;
     padding: 50px 20px 0 30px;
-
 
     @media (max-width: 1001px) {
         flex-direction: row;
