@@ -35,7 +35,8 @@ export default function MessageField() {
                         padding: '10px',
                         margin: '5px',
                         borderRadius: '15px',
-                        color: '#43D694'
+                        color: '#43D694',
+                        backgroundColor: '#f7f7f7'
                     }}
                 >Отправить</Button>
             </FlexBox>
