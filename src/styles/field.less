@@ -5,10 +5,20 @@
     justify-content: flex-end;
 
     @media (max-width: 1070px) {
-        width: @width;
+        width: 400px;
     }
 
     @media (max-width: 1001px) {
         align-items: flex-start;    
+    }
+}
+
+.reverse {
+    margin: @margin;
+    margin-bottom: 0px;
+    width: @width;
+
+    @media(max-width: 1001px) {
+        margin: 0;
     }
 }
