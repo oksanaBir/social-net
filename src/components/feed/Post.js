@@ -29,10 +29,9 @@ export default function Post({post}) {
                         () => dispatch(likePost(id, likes + 1))
                     }
                 />
-                <Text
-                    margin={5}
-                    description={true}
-                >{ likes }</Text>
+                <p
+                    style={{ margin: '5px'}}
+                >{ likes }</p>
                 <ShareAltOutlined
                     style={{ margin: '5px 0 5px 10px' }}
                     value={share}
@@ -40,7 +39,9 @@ export default function Post({post}) {
                         () => dispatch(sharePost(id, share + 1))
                     }
                 />
-                <Text margin={5}>{ share }</Text>
+                <p
+                    style={{margin: '5px'}}
+                >{ share }</p>
             </FlexBox>
         </PostWrapper>
     );
