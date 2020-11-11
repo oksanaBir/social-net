@@ -112,12 +112,12 @@ export default function app(state = initialState, action) {
         case SEND_MESSAGE:
             return {
                 messages: [
-                    ...state.messages,
                     {
                         ...state.message,
                         id: action.id,
                         date: action.date,
                     },
+                    ...state.messages,
                 ],
                 message: {
                     ...state.message,
