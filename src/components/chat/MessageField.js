@@ -15,7 +15,7 @@ export default function MessageField() {
     return(
         <Field reverse={true}> 
             <TextArea
-                height = {40}
+                height = {80}
                 value={text}
                 validation={validation}
                 onChange={
@@ -36,7 +36,7 @@ export default function MessageField() {
                         margin: '5px',
                         borderRadius: '15px',
                         color: '#43D694',
-                        backgroundColor: '#f7f7f7'
+                        backgroundColor: '#f7f7f7',
                     }}
                 >Отправить</Button>
             </FlexBox>
