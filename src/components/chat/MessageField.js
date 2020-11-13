@@ -15,7 +15,7 @@ export default function MessageField() {
     return(
         <Field reverse={true}> 
             <TextArea
-                height = {80}
+                height = {60}
                 value={text}
                 validation={validation}
                 onChange={
