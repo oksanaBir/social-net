@@ -7,13 +7,15 @@ export default function TextArea({
         textarea,
         onChange,
         validation,
-        height = 100
+        height = 100,
+        reverse
     }) {
     return(
         <textarea
             className={classNames({
                 textarea,
-                danger: !validation
+                danger: !validation,
+                reverse
             })}
             style={{
                 height: height + 'px'
@@ -28,9 +30,11 @@ export default function TextArea({
 TextArea.propTypes = {
     textarea: PropTypes.bool,
     danger: PropTypes.bool,
+    reverse: PropTypes.bool,
 }
 
 TextArea.defaultProps = {
     textarea: true,
     danger: false,
+    reverse: false
 }
