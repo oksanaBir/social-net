@@ -5,7 +5,7 @@
     justify-content: flex-end;
 
     @media (max-width: 1070px) {
-        width: 400px;
+        width: 100%;
     }
 
     @media (max-width: 1001px) {
@@ -18,9 +18,12 @@
     margin-bottom: 0px;
     width: @width;
 
+    @media(max-width: 1070px) {
+        width: 100%;
+    }
+
     @media(max-width: 1001px) {
         margin: 0;
-        width: 100%;
         padding: 0 !important;
     }
 }
