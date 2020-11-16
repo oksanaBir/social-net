@@ -17,11 +17,11 @@ const history = createBrowserHistory()
 export default function Menu() {
   return (
     <Router>
-      <div>
+      
         <MenuWrapper>
         <MenuItem>
             <Link
-                to="/feed"
+                to="/#/feed"
                 style={{
                     textDecoration: 'none',
                     color: 'black',
@@ -30,7 +30,7 @@ export default function Menu() {
         </MenuItem>
         <MenuItem>
             <Link
-                to="/chat"
+                to="/#/chat"
                 style={{
                     textDecoration: 'none',
                     color: 'black',
@@ -46,9 +46,8 @@ export default function Menu() {
           <Route history={history} path="/chat">
             <Chat />
           </Route>
-          <Redirect from='/' to='/feed'/>
+          <Redirect from='/' to='/chat'/>
         </Switch>
-      </div>
     </Router>
   );
 }
