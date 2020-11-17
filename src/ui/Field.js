@@ -1,26 +1,16 @@
 import React from 'react';
 import classNames from 'classnames';
-import PropTypes from 'prop-types';
 
-export default function Field({children, field, reverse}) {
+export default function Field({
+    children,
+    height=0
+}) {
     return(
         <div
-            className={classNames({
-                field,
-                reverse,
-            })}
+            className={classNames('field')}
+            style={{ height: height + '%'}}
         >
             {children}
         </div>
     );
-}
-
-Field.propTypes = {
-    field: PropTypes.bool,
-    reverse: PropTypes.bool,
-}
-
-Field.defaultProps = {
-    field: true,
-    reverse: false,
 }

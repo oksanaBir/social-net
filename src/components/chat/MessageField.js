@@ -13,10 +13,9 @@ export default function MessageField() {
     const dispatch = useDispatch();
 
     return(
-        <Field reverse={true}> 
+        <Field height={20}> 
             <TextArea
-                height = {60}
-                reverse={true}
+                
                 value={text}
                 validation={validation}
                 onChange={
