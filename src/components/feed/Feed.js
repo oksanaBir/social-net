@@ -13,6 +13,7 @@ export default function Feed() {
         <MainFeedWrapper>
             <PostField key={post.id} post={post} />
             <FlexBox
+                width={'100%'}
                 direction={flexDirection.column}
                 position={flexPosition.center}
             >

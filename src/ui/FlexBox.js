@@ -18,6 +18,7 @@ export function FlexBox({
     direction = flexDirection.row,
     left = 0,
     margin = 0,
+    width = 'auto'
 }) {
     return(
         <div
@@ -27,7 +28,8 @@ export function FlexBox({
                 alignItems: position,
                 flexDirection: direction,
                 margin: margin + 'px',
-                paddingLeft: left + 'px'
+                paddingLeft: left + 'px',
+                width: width,
             }}
         >
             {children}
