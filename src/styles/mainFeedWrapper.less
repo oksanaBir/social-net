@@ -1,26 +1,36 @@
 .mainFeedWrapper {
-    padding: 30px 30px 30px calc(@fullSidebarWidth + 30px) !important;
+    padding: @padding;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0px;
+    width: calc(100% - @fullSidebarWidth * 2);
+    height: @widthWithoutPadding;
+    position: relative;
+    left: @fullSidebarWidth;
 
     @media (max-width: 1070px) {
         flex-direction: column !important;
     }
 
     @media (max-width: 1001px) {
-        padding: 20px !important;
-        top: 220px;
+        width: @widthWithoutPadding;
+        left: 0;
+        height: auto;
     }
 
     @media (max-width: 360px) {
         width: 100%;
-        top: 400px;
         padding: 0 !important;
     }
 }
 
 .reverse {
-    box-sizing: border-box;
+    @media (max-width: 1001px) {
+        height: 100%;
+        width: @widthWithoutPadding !important;
+    }
+
+    @media (max-width: 360px) {
+        width: 100% !important;
+    }
 }

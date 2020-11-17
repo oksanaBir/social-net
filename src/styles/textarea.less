@@ -1,10 +1,10 @@
 .textarea {
-    padding: 20px;
     border-radius: 15px;
     color: @gray;
-    width: 700px;
     border: @greenBorder;
     color: @green;
+    padding: 20px;
+    height: auto !important;
 
     @media (max-width: 1070px) {
         position: relative;
@@ -12,7 +12,11 @@
         margin-bottom: 0px;
         padding: 10px;
         box-sizing: border-box;
-        width: @width;
+        width: @widthWithoutMargin;
+    }
+
+    @media (max-width: 360px) {
+        height: 100% !important;
     }
 }
 
@@ -26,8 +30,6 @@
 }
 
 .reverse {
-    width: @width;
-
     @media (max-width: 1001px) {
         width: 100%;
         margin: 0;
