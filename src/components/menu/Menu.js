@@ -17,11 +17,10 @@ const history = createBrowserHistory()
 export default function Menu() {
   return (
     <Router>
-      
         <MenuWrapper>
         <MenuItem>
             <Link
-                to="/#/feed"
+                to="/feed"
                 style={{
                     textDecoration: 'none',
                     color: 'black',
@@ -30,7 +29,7 @@ export default function Menu() {
         </MenuItem>
         <MenuItem>
             <Link
-                to="/#/chat"
+                to="/chat"
                 style={{
                     textDecoration: 'none',
                     color: 'black',
