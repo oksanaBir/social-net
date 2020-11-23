@@ -45,7 +45,7 @@ export default function Menu() {
           <Route history={history} path="/chat">
             <Chat />
           </Route>
-          <Redirect from='/' to='/chat'/>
+          <Redirect from='/' to='/feed'/>
         </Switch>
     </Router>
   );
