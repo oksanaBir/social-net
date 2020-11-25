@@ -3,6 +3,7 @@ import MenuWrapper from '../../ui/MenuWrapper';
 import MenuItem from '../../ui/MenuItem';
 import Chat from '../chat/Chat';
 import Feed from '../feed/Feed';
+import { MailOutlined, HomeOutlined } from '@ant-design/icons';
 import {createBrowserHistory} from 'history';
 import {
   BrowserRouter as Router,
@@ -35,7 +36,9 @@ export default function MobileMenu() {
                     textDecoration: 'none',
                     color: 'black',
                 }}
-            >Главная</Link>
+            >
+                <HomeOutlined />
+            </Link>
         </MenuItem>
         <MenuItem>
             <Link
@@ -44,7 +47,9 @@ export default function MobileMenu() {
                     textDecoration: 'none',
                     color: 'black',
                 }}
-            >Сообщения</Link>
+            >
+                <MailOutlined />
+            </Link>
         </MenuItem>
         </MenuWrapper>
     </Router>

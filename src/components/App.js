@@ -1,11 +1,11 @@
 import React from 'react';
 import "../styles/styles.less";
-import Menu from './menu/Menu';
+import MobileMenu from './menu/MobileMenu';
 
 export default function App() {
     return (
         <>
-            <Menu />
+            <MobileMenu />
         </>
     );
 }
