@@ -13,7 +13,7 @@ export default function CreatePost() {
     const dispatch = useDispatch();
 
     return(
-        <Field height={25}>
+        <Field>
             <TextArea
                 value={text}
                 validation={validation}

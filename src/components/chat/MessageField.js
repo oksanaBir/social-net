@@ -13,7 +13,7 @@ export default function MessageField() {
     const dispatch = useDispatch();
 
     return(
-        <Field height={20}> 
+        <Field> 
             <TextArea
                 
                 value={text}
