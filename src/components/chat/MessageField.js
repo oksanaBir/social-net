@@ -15,8 +15,8 @@ export default function MessageField() {
     return(
         <Field> 
             <TextArea
-                
                 value={text}
+                message={true}
                 validation={validation}
                 onChange={
                     (value) => dispatch(changeMessageText(value))
@@ -26,19 +26,17 @@ export default function MessageField() {
                 position={flexPosition.end}
             >
                 <Button
+                    icon={<CheckOutlined />}
                     disabled={validation === false}
                     onClick={
-                        () => dispatch(sendMessage())
+                        () => dispatch(publishPost())
                     }
                     style={{
                         border: 'none',
-                        padding: '10px',
                         margin: '5px',
-                        borderRadius: '15px',
-                        color: '#43D694',
-                        backgroundColor: '#f7f7f7',
+                        backgroundColor: 'transparent'
                     }}
-                >Отправить</Button>
+                />
             </FlexBox>
         </Field>
     )
